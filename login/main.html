@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/jquery-3.3.1.js"></script>
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			margin: 0;
+			padding: 0;
+		}
+		.top_one{
+			margin: 0 auto;
+			height: 280px;
+			width: 180px;
+			background-color: red;
+			
+		}
+		.tradeimg_one{
+			height: 180px;
+			width: 180px;
+		}
+		#butt{
+			height: 30px;
+			width: 80px;
+			float: right;
+			
+			}
+		#pay{
+			height: 600px;
+			width: 600px;
+			background-color: skyblue;
+			display: block;
+			position: relative;
+			left: 260px;
+			margin-bottom: 300px;
+		}
+	</style>
+	
+	<script type="text/javascript">
+			function buy(){
+				var pay = document.getElementById("pay");
+				var apay = pay.currentStyle["display"];
+				if("none" == apay){
+					pay.style.display="block";
+				}else{
+					pay.style.display="none";
+				}
+				alert("123");
+			}
+			
+		
+		</script>
+		
+	<body>
+		<div class="top_one">
+			<div><img src="img/shangping.jpg" class="tradeimg_one"/>
+				<p>圣诞节生日礼物</p>
+				<input type="button" value="点击购买"  id="butt"/></div>
+			</div>
+			
+			<div><img src="img/shangping.jpg" class="tradeimg_one"/>
+				<p>圣诞节生日礼物</p>
+				<input type="button" value="点击购买"  id="butt"/></div>
+			</div>
+			
+			<div><img src="img/shangping.jpg" class="tradeimg_one"/>
+				<p>圣诞节生日礼物</p>
+				<input type="button" value="点击购买"  id="butt"/></div>
+			</div>
+			
+			<div><img src="img/shangping.jpg" class="tradeimg_one"/>
+				<p>圣诞节生日礼物</p>
+				<input type="button" value="点击购买"  id="butt"/></div>
+			</div>
+		
+		<div id="pay">
+			
+		</div>
+		
+	</body>
+	
+</html>

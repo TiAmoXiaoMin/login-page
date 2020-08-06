@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="js/jquery-3.3.1.js"></script>
+<title>LNG罐车</title>
+<style>
+	body,  ul, li {
+	    margin: 0px;
+	    padding: 0px;
+	}
+	.wrapper {
+	    width: 1000px;
+	    margin: 0 auto;
+	    position: relative;
+	}
+	.nav-mod {
+	    position: relative;
+	    z-index: 15;
+	}
+	h3.topic_title {
+	    border-bottom: 2px solid #BDCFDC;
+	    font-size: 14px;
+	    padding-left: 18px;
+	    margin-bottom: 20px;
+	}
+	.categoryhd {
+	    border-bottom: 2px solid #0759C4;}
+	.categoryhd { position:relative; height:40px; line-height:40px;  }
+	.categoryhd { border-bottom:2px solid #0759c4; }
+	.more-mod {
+	    position: absolute;
+	    bottom: 6px;
+	    right: 0px;
+	    padding: 0px 30px 0px 20px;
+	    height: 20px;
+	    line-height: 20px;
+	    display: block;
+	    font-family: simsun;
+	    color: #333;
+	}
+
+	.goods_request{
+	    height: 293px;
+	    border-right: 1px solid #E3E3E3;
+	    border-width: 0px 1px 1px;
+	    border-style: none solid solid;
+	    border-color: -moz-use-text-color #E3E3E3 #E3E3E3;
+	    -moz-border-top-colors: none;
+	    -moz-border-right-colors: none;
+	    -moz-border-bottom-colors: none;
+	    -moz-border-left-colors: none;
+	    border-image: none;
+	}
+	.goods_request.first{
+	    width: 233px;
+	    border-left: 0px none;
+	}
+	.goods_request li {
+	    float: left;
+	    width: 234px;
+	    border-left: 1px solid #E3E3E3;
+	}
+	img{
+		height: 230px;
+		width: 220px;
+	}
+
+	#pay{
+			height: 500px;
+			width: 600px;
+			background-color: skyblue;
+			display: block;
+			position: absolute;
+			left: 460px;
+			top: 60px;
+			display: block;
+			border-radius: 16px;
+		}
+	#tables{
+		height: 500px;
+		width: 500px;
+	}	
+	
+	.txt {
+		
+		height: 30px;
+				width: 280px;
+				border-radius: 6px;
+				background-color: #C6F4F4;
+	}
+	#btm{
+		height: 40px;
+		width: 120px;
+		float: right;
+		background-color: red;
+		border-radius: 30px;
+	}
+	#number{
+		display: none;
+	}
+</style>
+
+<script type="text/javascript">
+	
+
+   
+
+
+	$(function(){
+		
+			function buy(){
+			 document.getElementById("pay").display="block";
+			alert("13");
+			var number = $("#number").val();
+			$.post("findProduct",{productId:number},function(data){
+				alert("123");
+				
+			},JSON);
+		}
+			
+			 function today(){//构建方法
+        var today=new Date();//new 出当前时间
+        var h=today.getFullYear();//获取年
+        var m=today.getMonth()+1;//获取月
+        var d=today.getDate();//获取日
+        var H = today.getHours();//获取时
+        var M = today.getMinutes();//获取分
+        var S = today.getSeconds();//获取秒
+        return h+"-"+m+"-"+d+" "+H+":"+M+":"+S; //返回 年-月-日 时:分:秒
+    }
+    document.getElementById("today").value = today();//将获取到的 年-月-日 时:分:秒 赋给input文本输入框
+   // alert(today());
+  //  alert(today);
+	
+	});
+	
+</script>
+</head>
+
+<body>
+   <div class="wrapper">
+    <div class="nav-mod categoryhd">
+        <h3>LNG罐车需求</h3>
+        <a href="#" target="_blank" class="more-mod">更多><i></i></a>
+    </div>
+        <ul class="goods_request">
+      <li class="first">
+          <img src="img/shangping.jpg" onclick="buy()"/> 
+          <a>圣诞节生日礼物圣诞节生日礼物圣诞节生日礼物</a>
+          <span id="number">111</span>
+      </li>
+        <li>
+          <div>
+         <img src="LNG罐车/tu.png"/> 
+        </div>
+     </li>
+             <li>
+          <div>
+         <img src="LNG罐车/tu.png"/> 
+        </div>
+     </li>       
+      <li>
+          <div>
+         <img src="LNG罐车/tu.png"/> 
+        </div>
+     </li>
+   
+        </ul>
+       </div>
+       
+        <div class="wrapper">
+    <div class="nav-mod categoryhd">
+        <h3>LNG罐车需求</h3>
+        <a href="#" target="_blank" class="more-mod">更多><i></i></a>
+    </div>
+        <ul class="goods_request">
+      <li class="first">
+          <img src="img/book.jpg" width="230"/> 
+      </li>
+        <li>
+          <div>
+         <img src="LNG罐车/tu.png"/> 
+        </div>
+     </li>
+             <li>
+          <div>
+         <img src="LNG罐车/tu.png"/> 
+        </div>
+     </li>       
+      <li>
+          <div>
+         <img src="LNG罐车/tu.png"/> 
+        </div>
+     </li>
+   
+        </ul>
+       </div>
+       
+       
+       <div id="pay">
+			<form action="#">
+				<table id="tables" border="0" cellpadding="7px">
+					<tr>
+						<td>
+							商品ID:
+						</td>
+						<td>
+							<input type="text" class="txt" />
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							商品名称:
+						</td>
+						<td>
+							<input type="text" class="txt" />
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							请输入你的姓名:
+						</td>
+						<td>
+							<input type="text" class="txt" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							请输入你的地址:
+						</td>
+						<td>
+							<input type="text" class="txt"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							请输入你的手机号:
+						</td>
+						<td>
+							<input type="text" class="txt"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							请选择你的运送方式:
+						</td>
+						<td>
+							<input type="text" class="txt"/>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							请选择你的运送方式:
+						</td>
+						<td>
+							<input type="text" name="date"  id="today" class="txt" />
+						</td>
+					</tr>
+					<tr>
+						<td colspan="0">
+							<input type="submit" value="付款" id="btm"/>
+						</td>
+					</tr>
+				</table>
+				
+			</form>
+		</div>
+</body>
+</html>

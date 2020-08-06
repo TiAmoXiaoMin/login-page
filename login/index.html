@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="lib/vue-2.4.0.js" ></script>
+		<title></title>
+		<style>
+			#topimg{
+				height: 300px;
+				width: auto;
+				/*background-color: blue;*/
+				background-image: url(img/01.jpg.png);
+			}
+			
+			#tables{
+				height: 300px;
+				width: 600px;
+				/*background-color: red;*/
+				position: relative;
+				left: 480px;
+			}
+			
+			.trs{
+				height: 60px;
+				width: 60px;
+				/*background-color: saddlebrown;*/
+				margin-top: 0px;
+				padding: 0px;
+				display: block;
+			}
+			#username{
+				height: 30px;
+				width: 280px;
+				border-radius: 6px;
+				background-color: #C6F4F4;
+				background:url(img/2.jpg.png) 8px 8px no-repeat;
+				background-position: left top;
+				text-align: right;
+			}
+			#password{
+				height: 30px;
+				width: 280px;
+				border-radius: 6px;
+				background-color: #C6F4F4;
+				background:url(img/password3.jpg) 8px 8px no-repeat;
+				background-position: left top;
+				text-align: right;
+			}
+			p{
+				height: auto;
+				width: 52px;
+				float: right;
+				text-align: center;
+			}
+			#sumb{
+				height: 36px;
+				width: 150px;
+				background-color: cornflowerblue;
+				position: relative;
+				left: 70px;
+				border-radius: 16px;
+				margin-bottom: 30px;
+			}
+			#check{
+				position: relative;
+				left: 70px;
+				margin-bottom: 11px;
+			}
+			#reme{
+				height: 20px;
+				width: 200px;
+				position: relative;
+				left: 20px;
+				margin-top: -30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="topimg">
+			
+			
+		</div>
+		
+		<div id="halfbottom">
+			<form action="#">
+				<table id="tables" border="0" cellpadding="7px">
+				<tr class="trs">
+					<td>
+						<p>用户名:</p>
+					</td>
+					<td>
+						<input type="text" name="username" placeholder="请输入用户名" autocomplete="off" id="username"/>
+					</td>
+				</tr>
+				<tr class="trs">
+					<td>
+						<p>密码:</p>
+					</td>
+					<td>
+						<input type="password" name="password" placeholder="请输入密码***" autocomplete="off" id="password"/>
+					</td>
+				</tr>
+				<tr class="trs">
+					<td colspan="0">
+						<input type="submit" value="登录" id="sumb"/>
+					</td>
+					<td>
+						<input type="checkbox"  id="check"/><p id="reme">记住密码</p>
+					</td>
+				</tr>
+			</table>
+				
+			</form>
+			
+			
+		</div>
+		
+		
+	</body>
+	
+	<script>
+		document.getElementById("add");
+	</script>
+</html>
